@@ -1,0 +1,14 @@
+# Configuration Management 
+
+See [Security and Privacy Controls for Information Systems and Organizations, Revision 5](https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_1_0/home?element=CM) for details about the Configuration Management controls. View the configuration policies that map to the Configuration Management category, and helps to detect or remediate security issues that are in the category.
+
+Policy  | Description | Prerequisites
+------- | ----------- | -------------
+[Scan your cluster with the E8 (Essential 8) security profile](../CM-Configuration-Management/policy-compliance-operator-e8-scan.yaml) | This example creates a ScanSettingBinding that the ComplianceOperator uses to scan the cluster for compliance with the E8 benchmark. | See the [Compliance Operator repository](https://github.com/openshift/compliance-operator) to learn more about the operator. **Note**: The Compliance Operator must be installed to use this policy. See the [Compliance operator policy](../CA-Security-Assessment-and-Authorization/policy-compliance-operator-install.yaml) to install the Compliance Operator with a policy.
+[Install Red Hat Gatekeeper Operator policy](../CM-Configuration-Management/policy-gatekeeper-operator-downstream.yaml) | Use the Gatekeeper operator policy to install the official and supported version of Gatekeeper on a managed cluster. | See the [Gatekeeper Operator](https://github.com/gatekeeper/gatekeeper-operator).
+[policy-namespace](../CM-Configuration-Management/policy-namespace.yaml) | Ensures that a namespace exists as specified. |
+[policy-pod](../CM-Configuration-Management/policy-pod.yaml) | Ensures that a pod exists as specified. |
+[policy-zts-cmc](../CM-Configuration-Management/policy-zts-cmc.yaml) | This example deploys a replica of \`zts-cmc-deployment\`. | See the [Zettaset README.stable(https://github.com/zettaset/zettaset-public/) to learn more about Zettaset CMC Deployment.
+[Scan your cluster with the OpenShift CIS security profile](../CM-Configuration-Management/policy-compliance-operator-cis-scan.yaml) | This example creates a ScanSettingBinding that the ComplianceOperator uses to scan the cluster for compliance with the OpenShift CIS benchmark. | See the [Compliance Operator repository](https://github.com/openshift/compliance-operator) to learn more about the operator. **Note**: The Compliance Operator must be installed to use this policy. See the [Compliance operator policy](../CA-Security-Assessment-and-Authorization/policy-compliance-operator-install.yaml) to install the Compliance Operator with a policy.
+
+You can contribute more policies that map to the Configuration Management catalog. See [Contibuting policies](https://github.com/open-cluster-management-io/policy-collection/blob/main/docs/CONTRIBUTING.md) for more details.
